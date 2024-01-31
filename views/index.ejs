@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD app</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your blog site</h1>
+        <% for(post of posts){%>
+            <div class="post">
+                <h3 class="username">@<%= post.username %></h3>
+                <p class="content"><%= post.content %></p>
+                <div class="btn">
+                    <button><a href="http://localhost:8080/posts/<%= post.id %>">Show in detail</a></button>
+                    <button><a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit post</a></button>
+                    <form action="/posts/<%= post.id %>?_method=DELETE" method="post" class="delete-post">
+                        <button class="deletebtn">Delete post</button>
+                    </form>
+                </div>
+            </div>
+            <% }%>
+            <button><a href="http://localhost:8080/posts/new">Create New Post</a></button>
+    </div>
+</body>
+</html>
