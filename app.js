@@ -31,18 +31,18 @@ let posts = [
     }
 ];
 
-app.get("/posts", (req, res) =>{
+app.get("/", (req, res) =>{
     res.render("index", { posts });
 });
 app.get("/posts/new", (req, res) =>{
     res.render("new");
 });
 
-app.post("/posts" , (req, res) =>{
+app.post("/" , (req, res) =>{
     let { username, content } = req.body; 
     let id  = uuidv4();
     posts.push({ id, username, content });
-    res.redirect("/posts"); 
+    res.redirect("/"); 
 }); 
 
 app.get("/posts/:id", (req, res) =>{
@@ -56,7 +56,7 @@ app.patch("/posts/:id", (req, res) =>{
     let post = posts.find((post) => id === post.id);
     let newContent = req.body.content;
     post.content = newContent;
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
 app.get("/posts/:id/edit" , (req, res) =>{
@@ -68,8 +68,8 @@ app.get("/posts/:id/edit" , (req, res) =>{
 app.delete("/posts/:id", (req, res) =>{
     let {id } = req.params;
     posts = posts.filter((post) => id !== post.id);
-    res.redirect("/posts");
-})
+    res.redirect("/");
+});
 app.listen(8080, () => {
     console.log("server start at localhost 8080");
 });
