@@ -18,9 +18,9 @@
                 <p class="content"><%= post.content %></p>
                 <div class="btn">
                     <button><a href="/posts/<%= post.id %>">Show in detail</a></button>
-                    <button><a href="/posts/<%= post.id %>/edit">Edit post</a></button>
+                    <button id="edit"><a href="/posts/<%= post.id %>/edit">Edit post</a></button>
                     <form action="/posts/<%= post.id %>?_method=DELETE" method="post" class="delete-post">
-                        <button class="deletebtn">Delete post</button>
+                        <button class="deletebtn" id="dlt">Delete post</button>
                     </form>
                 </div>
             </div>
@@ -30,4 +30,35 @@
             </form>
     </div>
 </body>
+<script>
+    let btn = document.querySelector('#create-btn');
+    let edit = document.querySelector('#edit');
+    let dlt = document.querySelector('#dlt');
+    btn.addEventListener('click', () => {
+        createAlert();
+    });
+    edit.addEventListener('click', () => {
+        editpost();
+    });
+    dlt.addEventListener('click', dlt());
+
+    function dlt(){
+        if (confirm("Are you sure to delete this Post?")) { 
+            return true; 
+        } else {  
+            return false;  
+        }
+    };
+
+    // Alert box on button click
+    const createAlert = ()=>{
+        alert('Please fill out all fields and press submit!','Info');
+    };
+    const editpost = ()=>{
+        let pass = prompt('Enter your password');
+    };
+    ()=> {
+        alert("Are you sure to delete this post?");   
+    };
+</script>
 </html>
