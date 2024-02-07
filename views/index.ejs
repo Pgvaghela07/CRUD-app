@@ -17,15 +17,17 @@
                 <h3 class="username">@<%= post.username %></h3>
                 <p class="content"><%= post.content %></p>
                 <div class="btn">
-                    <button><a href="http://localhost:8080/posts/<%= post.id %>">Show in detail</a></button>
-                    <button><a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit post</a></button>
+                    <button><a href="/posts/<%= post.id %>">Show in detail</a></button>
+                    <button><a href="/posts/<%= post.id %>/edit">Edit post</a></button>
                     <form action="/posts/<%= post.id %>?_method=DELETE" method="post" class="delete-post">
                         <button class="deletebtn">Delete post</button>
                     </form>
                 </div>
             </div>
             <% }%>
-            <button><a href="http://localhost:8080/posts/new">Create New Post</a></button>
+            <form action="/posts/new" method="get">
+                <button id="create-btn">Create new post</button>
+            </form>
     </div>
 </body>
 </html>
