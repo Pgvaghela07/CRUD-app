@@ -1,10 +1,9 @@
-body{
-    margin: 10px;
+*{
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(/public/images/flat-lay-arrangement-desk-elements-with-copy-space.jpg) no-repeat fixed center;
-    background-size: cover;
 }
+
 @media only screen and (max-width: 1200px) {
     .body{
         margin-left: auto;
@@ -21,40 +20,58 @@ body{
         width: 85%;
         height: 20rem;
     }
+    .post h3{
+        font-size: 50px;
+    }
+    .post form input{
+        width: 100%;
+        height: 4rem;
+        font-size: 30px;
+    }
+    .post form textarea{
+        width: 100%;
+        height: 6rem;
+        font-size: 30px;
+    }
   }
   @media only screen and (max-width: 600px) {
-    .post {
-        width: 100%;
-        height: 70vh;
+    .container h1{
+        font-size: 200px; 
     }
     .btn{
        gap: 10px;
     }
     .post h3{
-        font-size: 100px; 
+        font-size: 85px; 
         margin: 2px;
     }
     .post p{
         font-size: 70px; 
         overflow-y: scroll;
     }
-    .btn button{
-        font-size: 70px; 
+    .container .btn button,form button{
+        width: fit-content;
+        margin: 40px;
     }
+    .container #create-btn{
+        font-size: 50px;
+        width: 330px;
+    }
+    
     .post form{
         width: 80%;
-        height: 70vh;
+        height: 50%;
     }
     .post form input{
         width: 100%;
-        height: 10vh;
+        height: 30%;
         font-size: 50px;
     }
-    .post form textarea{
+    textarea{
         width: 100%;
-        height: 20vh;
+        height: 20%;
         overflow: scroll;
-        font-size: 50px;
+        font-size: 80px;
     }
     .post form button{
         width: 40%;
@@ -65,9 +82,6 @@ body{
         background-color: orange;
     }
 
-h1{
-    text-align: center;
-}
   }
 .container
 {
@@ -79,23 +93,32 @@ h1{
     padding: 25px;
     margin-left: auto;
     margin-right: auto; 
+    background-image: url(/public/images/flat-lay-arrangement-desk-elements-with-copy-space.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container h1{
+    font-size: 50px;
 }
 .post{
     width: 100%;
     height: fit-content;
     margin: 20px;
+    padding: 10px;
     font-size: 30px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: rgb(153, 153, 255);
+    background-color: darkblue;
+    color: white;
     box-shadow: 0px 0px 15px 5px black;
     
 }
 
 .post form{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -105,14 +128,17 @@ h1{
     border: 2px solid black;
     border-radius: 5px;
 }
-.container button{
-    margin: 10px;
-    padding: 10px;
-    background-color: rgb(255, 62, 62);
-    border-radius: 12px;
-    border: 2px solid black;
-}
 
+.post form input{
+    width: 100%;
+    height: 20%;
+    font-size: 30px;
+}
+.post form textarea{
+    width: 100%;
+    height: 30%;
+    font-size: 30px;
+}
 .post form button{
     margin: 10px;
     padding: 10px;
@@ -142,6 +168,10 @@ h1{
 .btn{
     display: flex;
     align-items: center;
+}
+.btn button a{
+    text-decoration: none;
+    color: black;
 }
 img{
     width: 200px;
