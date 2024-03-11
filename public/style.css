@@ -43,13 +43,17 @@
         height:100vh;
         object-position: bottom;
     }
-    .container h1{
-        font-size: 200px; 
+    body .container h1{
+        font-size: 160px; 
+        text-shadow: 0 0 15px white;
     }
     .btn{
        gap: 10px;
     }
-    .post h3{
+    .container .post{
+        margin-bottom: 50px;
+    }
+    .container .post h3{
         font-size: 85px; 
         margin: 2px;
     }
