@@ -61,10 +61,16 @@
         font-size: 70px; 
         overflow-y: scroll;
     }
-    .container .btn button,form button{
-        width: fit-content;
+    .container .btn button{
+        width: 50%;
         padding: 5px 5px;
-        margin: 40px;
+        margin: 0 40px;
+        font-size: 35px;
+    }
+    .container .btn form button{
+        width: 50%;
+        margin: 0 20px;
+        font-size: 35px;
     }
     .container #create-btn{
         font-size: 50px;
@@ -116,7 +122,8 @@
     font-size: 30px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: rgb(12, 12, 77);
+    background-color: rgb(145, 145, 145);
+    opacity: 0.9;
     color: white;
     box-shadow: 0px 0px 15px 5px black;
     
@@ -159,7 +166,7 @@
     margin-right: auto;
     justify-content: center;
     width: 25%;
-    background-color: rgb(159, 16, 16);
+    background-color: rgb(194, 9, 9);
     border: 2px solid black;
     border-radius: 12px;
 }
@@ -169,7 +176,7 @@
     padding: 8px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(159, 16, 16);
+    background-color: rgb(181, 14, 14);
     border-radius: 12px;
     text-decoration: none;
     justify-content: center;
@@ -203,6 +210,7 @@
 #create-btn{
     width: 200px;
     margin: 10px;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(163, 0, 0);
