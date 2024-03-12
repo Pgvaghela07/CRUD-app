@@ -38,11 +38,7 @@
     }
   }
   @media only screen and (max-width: 600px) {
-    body img{
-        width: 100vw;
-        height:100vh;
-        object-position: bottom;
-    }
+
     body .container h1{
         font-size: 160px; 
         text-shadow: 0 0 15px white;
@@ -104,6 +100,10 @@
   }
 .container
 {
+    background-image: url(/images/blogpost\ bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
     display: flex;
     flex-direction: column;
     align-items: center;
