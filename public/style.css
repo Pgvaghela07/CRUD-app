@@ -172,10 +172,8 @@
 }
 .container button{
     width: 20%;
-    margin: 10px;
     padding: 8px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
     background-color: rgb(181, 14, 14);
     border-radius: 12px;
     text-decoration: none;
